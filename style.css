@@ -81,10 +81,19 @@ section.menu {
         white-space: nowrap;
     }
 
+    .menu__list__item,
     .menu__list__item--contacto {
-        padding-top: 15px;
-        font-weight: bold;
+        display: inline-block;
+        margin: 0 10px;
+        vertical-align: middle;
+        padding-top: 0;      
+        font-weight: normal; 
         font-size: 0.8rem;
+    }
+
+    .menu__list__item--contacto a {
+        color: #007bff;
+        font-weight: bold;
     }
 
     nav {
@@ -251,7 +260,7 @@ section.experience {
         margin-bottom: 40px;
     }
 
-    .experiencie__box {
+    .experience__box {
         display: flex;
         flex-direction: row;
         margin: 20px auto;
@@ -259,14 +268,13 @@ section.experience {
         justify-content: space-around;
     }
 
-    .experiencie__box-juego {
+    .experience__box-juego {
         display: flex;
         flex-direction: row-reverse;
         margin: 20px auto;
         width: 90%;
         justify-content: space-around;
     }
-
 
     .experience__img {
         width: 100%;
@@ -285,21 +293,6 @@ section.experience {
         font-size: 1rem;
     }
 
-    .experience__box {
-        display: flex;
-        flex-direction: row;
-        margin: 20px auto;
-        width: 90%;
-        justify-content: space-around;
-    }
-
-    .experience__img {
-        width: 100%;
-        height: auto;
-        max-width: 500px;
-        object-fit: cover;
-    }
-
     .experience__info-container {
         width: 100%;
         max-width: 500px;
@@ -310,14 +303,26 @@ section.experience {
         font-size: 1rem;
     }
 
-    .experience__box-juego {
-        display: flex;
-        flex-direction: row-reverse;
-        margin: 20px auto;
-        width: 90%;
-        justify-content: space-around;
+    .experience__boton--repo {
+        background-color: #e0e0e0;
+        color: #222;
+        border: none;
+        padding: 8px 16px;
+        margin-right: 8px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: bold;
     }
 
+    .experience__boton--demo {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 8px 16px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: bold;
+    }
 }
 
 /*Contacto*/
@@ -336,7 +341,7 @@ section.formcontato {
         align-items: center;
     }
 
-    .formcontato--esquerda {
+    .formcontato__izquierda {
         width: 50%;
     }
 
@@ -500,32 +505,12 @@ Utiliza las referencias de los breakpoints @media abajo */
 
     section.experience {
 
-        .experiencie__box-juego {
-            display: flex;
-            flex-direction: column;
-            width: 90%;
-            margin: 0 auto;
-            height: auto;
-            align-items: center;
-        }
-
-        .experiencie__box {
-            display: flex;
-            flex-direction: column;
-            width: 90%;
-            margin: 0 auto;
-            height: auto;
-            justify-content: center;
-            align-items: center;
-        }
-
         .experience__box-juego {
             display: flex;
             flex-direction: column;
             width: 90%;
             margin: 0 auto;
             height: auto;
-            justify-content: center;
             align-items: center;
         }
 
@@ -632,7 +617,7 @@ Utiliza las referencias de los breakpoints @media abajo */
             flex-direction: column;
         }
 
-        .formcontato--esquerda {
+        .formcontato__izquierda {
             display: flex;
             width: 90%;
             margin: 0 auto;
