@@ -20,9 +20,14 @@
             <header class="menu__header">
                 <img src="assets/mi-perfil.jpg" alt="Foto de Dante Nicolás Caballero">
                 <h3 class="menu__title">Dante Nicolás Caballero</h3>
+                <button class="menu__hamburger" aria-label="Abrir menú" aria-controls="menu-list" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </header>
             <nav>
-                <ul class="menu__list">
+                <ul class="menu__list" id="menu-list">
                     <li class="menu__list__item"><a href="#sobre-mi">Sobre mi</a></li>
                     <li class="menu__list__item"><a href="#skills">Skills</a></li>
                     <li class="menu__list__item"><a href="#hobbies">Hobbies</a></li>
@@ -320,6 +325,25 @@
     </div>
 
     <script src="validacion.js"></script>
+    <script>
+        const hamburger = document.querySelector('.menu__hamburger');
+        const menuList = document.querySelector('.menu__list');
+        const menuLinks = document.querySelectorAll('.menu__list__item a');
+
+        hamburger.addEventListener('click', function () {
+            const expanded = this.getAttribute('aria-expanded') === 'true';
+            this.setAttribute('aria-expanded', !expanded);
+            menuList.classList.toggle('menu__list--open');
+        });
+
+        // Cierra el menú al hacer click en cualquier enlace del menú
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menuList.classList.remove('menu__list--open');
+                hamburger.setAttribute('aria-expanded', false);
+            });
+        });
+    </script>
 </body>
 
 </html>

@@ -31,6 +31,12 @@ a {
     color: var(--cor-de-link);
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
 /*En este desafío nosostros gustaríamos que ustedes intentaran utilizar la metodología BEM. 
 
 Lo que es el BEM?
@@ -58,8 +64,10 @@ section.menu {
     .menu__header {
         display: flex;
         align-items: center;
+        justify-content: space-between;
         gap: 10px;
         white-space: nowrap;
+        width: 100%; 
     }
 
     .menu__header img {
@@ -99,6 +107,95 @@ section.menu {
     nav {
         display: flex;
         gap: 20px;
+    }
+
+    .menu__hamburger {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        gap: 4px;
+        width: 32px;
+        height: 32px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        margin-left: 10px;
+    }
+
+    .menu__hamburger span {
+        display: block;
+        height: 4px;
+        width: 100%;
+        background: #222;
+        border-radius: 2px;
+        transition: 0.3s;
+    }
+
+    /* Responsive: mostrar hamburguesa y ocultar menú en móvil */
+    @media (max-width: 796px) {
+        .menu__hamburger {
+            display: flex;
+        }
+        .menu__list {
+            display: none;
+            flex-direction: column;
+            background: linear-gradient(135deg, #e0f7fa 60%, #b2f7ef 100%);
+            position: absolute;
+            top: 60px;
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0 8px 32px rgba(10, 228, 159, 0.18), 0 2px 8px rgba(0,0,0,0.10);
+            border-radius: 18px;
+            min-width: 180px;
+            max-width: 90vw;
+            max-height: 60vh;
+            z-index: 100;
+            align-items: stretch;
+            padding: 20px 0 16px 0;
+            overflow-y: auto;
+            animation: menuFadeIn 0.3s;
+            border: 2px solid #0ae49f;
+            backdrop-filter: blur(8px);
+        }
+        .menu__list.menu__list--open {
+            display: flex;
+        }
+        .menu__list__item,
+        .menu__list__item--contacto {
+            margin: 8px 18px;
+            padding: 12px 0;
+            width: auto;
+            text-align: center;
+            border-radius: 12px;
+            font-size: 1.08rem;
+            background: linear-gradient(90deg, #f5f5f5 60%, #e3f0ff 100%);
+            box-shadow: 0 2px 8px rgba(10, 228, 159, 0.04);
+            transition: background 0.2s, color 0.2s, transform 0.2s, box-shadow 0.2s;
+            border: 1.5px solid #b2f7ef;
+        }
+        .menu__list__item a,
+        .menu__list__item--contacto a {
+            color: #2a4d42;
+            font-weight: 600;
+            display: block;
+            width: 100%;
+            padding: 8px 0;
+            border-radius: 12px;
+            transition: background 0.2s, color 0.2s;
+        }
+        .menu__list__item:hover,
+        .menu__list__item--contacto:hover,
+        .menu__list__item a:hover,
+        .menu__list__item--contacto a:hover {
+            background: linear-gradient(90deg, #0ae49f 60%, #007bff 100%);
+            color: #fff !important;
+            transform: scale(1.04);
+            box-shadow: 0 4px 16px rgba(10, 228, 159, 0.10);
+        }
+        @keyframes menuFadeIn {
+            from { opacity: 0; transform: translateY(-20px) translateX(-50%);}
+            to { opacity: 1; transform: translateY(0) translateX(-50%);}
+        }
     }
 }
 
