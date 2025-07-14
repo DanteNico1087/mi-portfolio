@@ -1,12 +1,4 @@
-/*CSS Reset / Normalize*/
-/* Hemos disponibilizado el básico de reset de estilos. Si quieren, añadan más informaciones 
-en las secciones señaladas */
-/*Já deixaremos o básico de reset de estilos. Caso queira adicionar mais informações
-coloque nas sessões indicadas*/
-
 :root {
-    /* Inserta la variable de los otros colores inspeccionando el exemplo de figma */
-    /*Se esforce para trabalhar com variáveis, é uma dica profissional valiosa*/
     --cor-de-fundo: #F5F5F5;
     --cor-de-link: #000;
 }
@@ -286,29 +278,52 @@ section.hobbies {
 /* Sección de Skills*/
 
 section.skills {
-
     margin: 30px 10px 0 10px;
+}
 
+.skills__line {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+}
 
-    .skills__title {
-        text-align: center;
-    }
+.skills__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-width: 100px;
+    max-width: 120px;
+    padding: 12px 8px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(10, 228, 159, 0.06);
+    margin: 8px 0;
+    background: none; /* Sin fondo */
+}
 
-    .skills__line {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-    }
+.skills__box img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    margin-bottom: 8px;
+    display: block;
+}
 
-    .skills__box {
-        text-align: center;
-        flex-grow: 1;
-    }
+.skills__name {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #2a4d42;
+    margin-top: 4px;
+}
 
-    .skills__box ul {
-        padding-right: 40px;
-        align-items: center;
-    }
+.skills__title {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 16px;
+    display: block;
 }
 
 /* Experiencia Académica */
