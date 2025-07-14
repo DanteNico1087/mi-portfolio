@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <div class="container">
+    <main class="container">
         <!-- Sección del Menú  -->
         <section class="menu">
             <header class="menu__header">
@@ -34,7 +34,8 @@
                     <li class="menu__list__item"><a href="#formacion">Formación</a></li>
                     <li class="menu__list__item"><a href="#xp">Proyectos</a></li>
                     <li class="menu__list__item"><a href="#contacto">Contacto</a></li>
-                    <li class="menu__list__item menu__list__item--contacto"><a href="#contacto">dantenico1002@gmail.com</a>
+                    <li class="menu__list__item menu__list__item--contacto"><a
+                            href="#contacto">dantenico1002@gmail.com</a>
                     </li>
                 </ul>
             </nav>
@@ -120,7 +121,8 @@
             <div class="hobbies__line">
                 <div class="hobbies__box">
                     <ul>
-                        <li class="hobbies__img"><img src="assets/icons8-fútbol-64.png" width="40" height="40" alt="icono de futbol"></li>
+                        <li class="hobbies__img"><img src="assets/icons8-fútbol-64.png" width="40" height="40"
+                                alt="icono de futbol"></li>
                         <li class="hobbies__name">Fútbol</li>
                     </ul>
                 </div>
@@ -134,14 +136,16 @@
 
                 <div class="hobbies__box">
                     <ul>
-                        <li class="hobbies__img"> <img src="assets/icons8-cocinar-48.png" width="40" height="40" alt="icono de un cocinero"> </li>
+                        <li class="hobbies__img"> <img src="assets/icons8-cocinar-48.png" width="40" height="40"
+                                alt="icono de un cocinero"> </li>
                         <li class="hobbies__name">Cocinar</li>
                     </ul>
                 </div>
 
                 <div class="hobbies__box">
                     <ul>
-                        <li class="hobbies__img"> <img src="assets/icons8-laboratory-48.png" width="40" height="40" alt="icono de un microscopio"> </li>
+                        <li class="hobbies__img"> <img src="assets/icons8-laboratory-48.png" width="40" height="40"
+                                alt="icono de un microscopio"> </li>
                         <li class="hobbies__name">Ciencia</li>
                     </ul>
                 </div>
@@ -155,7 +159,8 @@
                 <div class="academic__courses__box">
                     <ul class="academic__courses__list">
 
-                        <li class="academic__courses__item__img"><img src="assets/ticmas-logo.png" width="190" height="130"></li>
+                        <li class="academic__courses__item__img"><img src="assets/ticmas-logo.png" width="190"
+                                height="130"></li>
                         <li class="academic__courses__item__title">
                             <h4>Introducción al Desarrollo Web</h4>
                         </li>
@@ -167,7 +172,8 @@
                 <div class="academic__courses__box">
                     <ul class="academic__courses__list">
                         <!--Pon el logotipo de la institución de formación -->
-                        <li class="academic__courses__item__img"><img src="assets/logo-de-codigo-facilito.png" width="190" height="130"></li>
+                        <li class="academic__courses__item__img"><img src="assets/logo-de-codigo-facilito.png"
+                                width="190" height="130"></li>
                         <li class="academic__courses__item__title">
                             <h4>Curso Profesional de React</h4>
                         </li>
@@ -178,7 +184,8 @@
                 </div>
                 <div class="academic__courses__box">
                     <ul class="academic__courses__list">
-                        <li class="academic__courses__item__img"><img src="assets/logo-de-alura.png" width="190" height="130"></li>
+                        <li class="academic__courses__item__img"><img src="assets/logo-de-alura.png" width="190"
+                                height="130"></li>
                         <li class="academic__courses__item__title">
                             <h4>Desarrollo Frontend</h4>
                         </li>
@@ -235,7 +242,8 @@
             </div>
 
             <div class="experience__box">
-                <img class="experience__img" src="assets/img-adivina-el-numero.png" alt="Captura Juego Adivina el número">
+                <img class="experience__img" src="assets/img-adivina-el-numero.png"
+                    alt="Captura Juego Adivina el número">
                 <div class="experience__info-container">
                     <h2 class="experience__title">Juego creado con HTML, CSS, Boostrap y JavaScript</h2>
                     <h3 class="experience__text">Challenge Alura</h3>
@@ -255,7 +263,8 @@
             </div>
 
             <div class="experience__box-juego">
-                <img class="experience__img" src="assets/img-resto-boostrap.png" alt="Captura Página restaurante Bootstrap">
+                <img class="experience__img" src="assets/img-resto-boostrap.png"
+                    alt="Captura Página restaurante Bootstrap">
                 <div class="experience__info-container">
                     <h2 class="experience__title">Página de Restorant creada co HTML, CSS, Boostrap y JavaScript</h2>
                     <h3 class="experience__text">Proyecto propio</h3>
@@ -286,7 +295,7 @@
                     <h3 class="formcontato__subtext">¿Quieres contactarme?</h3>
                     <h3 class="formcontato__subtext">Complete el siguiente formulario y me pondré en contacto con
                         usted lo antes posible. </h3>
-                    <form method="post" action="mailto:dantenico1002@gmail.com" class="formcontato__form" name="form">
+                    <form id="contactForm" class="formcontato__form" action="/api/contact" method="POST" novalidate>
                         <label for="nombre">Nombre</label>
                         <input class="formcontato__input" type="text" id="nombre" name="nombre" placeholder="Nombre">
 
@@ -297,7 +306,8 @@
                         <input class="formcontato__input" type="text" id="asunto" name="asunto" placeholder="Asunto">
 
                         <label for="mensaje">Mensaje</label>
-                        <textarea class="formcontato__textarea" rows="5" cols="40" id="mensaje" name="mensaje" placeholder="Mensaje"></textarea>
+                        <textarea class="formcontato__textarea" rows="5" cols="40" id="mensaje" name="mensaje"
+                            placeholder="Mensaje"></textarea>
 
                         <button type="submit" class="formcontato__botao">Enviar mensaje</button>
                     </form>
@@ -312,28 +322,28 @@
                 <p>&copy; 2024</p>
             </div>
         </footer>
-    </div>
+        </div>
 
-    <script src="validacion.js"></script>
-    <script>
-        const hamburger = document.querySelector('.menu__hamburger');
-        const menuList = document.querySelector('.menu__list');
-        const menuLinks = document.querySelectorAll('.menu__list__item a');
+        <script src="validacion.js"></script>
+        <script>
+            const hamburger = document.querySelector('.menu__hamburger');
+            const menuList = document.querySelector('.menu__list');
+            const menuLinks = document.querySelectorAll('.menu__list__item a');
 
-        hamburger.addEventListener('click', function () {
-            const expanded = this.getAttribute('aria-expanded') === 'true';
-            this.setAttribute('aria-expanded', !expanded);
-            menuList.classList.toggle('menu__list--open');
-        });
-
-        // Cierra el menú al hacer click en cualquier enlace del menú
-        menuLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                menuList.classList.remove('menu__list--open');
-                hamburger.setAttribute('aria-expanded', false);
+            hamburger.addEventListener('click', function () {
+                const expanded = this.getAttribute('aria-expanded') === 'true';
+                this.setAttribute('aria-expanded', !expanded);
+                menuList.classList.toggle('menu__list--open');
             });
-        });
-    </script>
+
+            // Cierra el menú al hacer click en cualquier enlace del menú
+            menuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    menuList.classList.remove('menu__list--open');
+                    hamburger.setAttribute('aria-expanded', false);
+                });
+            });
+        </script>
 </body>
 
 </html>
