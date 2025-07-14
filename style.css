@@ -521,23 +521,30 @@ section.formcontato {
     }
 }
 
-/*footeer*/
-
-section.footer {
-
-    background-color: rgb(42, 77, 66);
-
-
-    .footer__rodape {
-        color: white;
-        width: 90%;
-        padding: 20px 0;
-        margin: 0 auto;
-    }
+/* ─────────────────────────────────────────────────────────
+   FOOTER
+───────────────────────────────────────────────────────── */
+footer.footer {
+  background-color: #2a4d42;
+  color: #f5f5f5;
+  text-align: center;
+  padding: 24px 20px;
 }
 
-/* Vamos a desafiarnos trabajando con responsividad?
-Utiliza las referencias de los breakpoints @media abajo */
+.footer__rodape {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+.footer__rodape p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
 
 
 /*Tablet*/
